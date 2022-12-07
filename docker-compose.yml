@@ -1,0 +1,12 @@
+version: '3'
+services:
+  myapp-main:
+    image: qap_test:latest
+    ports:
+      - 8080:8080
+    environment:
+#      - spring.datasource.url=jdbc:mysql://localhost:3306/
+      - spring.datasource.url=jdbc:mysql://sdatdb.c3j8jmpcucau.us-east-1.rds.amazonaws.com
+      - spring.datasource.password=Password
+      - spring.datasource.username=admin
+      - spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
